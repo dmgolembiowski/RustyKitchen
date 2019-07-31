@@ -1,0 +1,5 @@
+true <-> 0b0011u32 (format in {} as {:04b})
+false <-> 0b0101u32 (format in {} as {:04b})
+&& <-> AND <-> &
+|| <-> OR <-> |
+(n/a) <-> {XOR} <-> ^
