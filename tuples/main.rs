@@ -8,6 +8,7 @@
  *
  * This is the solution to "activity.txt"
  */
+
 use std::fmt;
 
 
