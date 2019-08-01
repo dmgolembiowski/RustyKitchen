@@ -1,0 +1,61 @@
+error: expected one of `!`, `(`, `)`, `+`, `,`, `::`, or `<`, found `:`
+  --> main.rs:18:29
+   |
+18 |     fn as_tuple(&self) -> (x: f64, y: f64) {
+   |                             ^ expected one of 7 possible tokens here
+
+error[E0423]: expected function, found struct `Rectangle`
+  --> main.rs:55:21
+   |
+55 |     let spongebob = Rectangle(point_one, point_two, point_three, point_four);
+   |                     ^^^^^^^^^ did you mean `Rectangle { /* fields */ }`?
+
+error[E0599]: no method named `as_tuple` found for type `Point` in the current scope
+  --> main.rs:35:38
+   |
+10 | struct Point {
+   | ------------ method `as_tuple` not found for this
+...
+35 |         let mut list = vec![ self.p1.as_tuple(), self.p2.as_tuple(),
+   |                                      ^^^^^^^^
+
+error[E0599]: no method named `as_tuple` found for type `Point` in the current scope
+  --> main.rs:35:58
+   |
+10 | struct Point {
+   | ------------ method `as_tuple` not found for this
+...
+35 |         let mut list = vec![ self.p1.as_tuple(), self.p2.as_tuple(),
+   |                                                          ^^^^^^^^
+
+error[E0599]: no method named `as_tuple` found for type `Point` in the current scope
+  --> main.rs:36:38
+   |
+10 | struct Point {
+   | ------------ method `as_tuple` not found for this
+...
+36 |                              self.p3.as_tuple(), self.p4.as_tuple()];
+   |                                      ^^^^^^^^
+
+error[E0599]: no method named `as_tuple` found for type `Point` in the current scope
+  --> main.rs:36:58
+   |
+10 | struct Point {
+   | ------------ method `as_tuple` not found for this
+...
+36 |                              self.p3.as_tuple(), self.p4.as_tuple()];
+   |                                                          ^^^^^^^^
+
+error[E0277]: `&()` is not an iterator
+  --> main.rs:42:21
+   |
+42 |         for pair in &pairs {
+   |                     ^^^^^^ `&()` is not an iterator
+   |
+   = help: the trait `std::iter::Iterator` is not implemented for `&()`
+   = note: required by `std::iter::IntoIterator::into_iter`
+
+error: aborting due to 7 previous errors
+
+Some errors occurred: E0277, E0423, E0599.
+For more information about an error, try `rustc --explain E0277`.

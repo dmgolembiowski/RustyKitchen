@@ -33,6 +33,12 @@ struct Rectangle {
     p1: Point,
     p2: Point,
 }
+/* Add a function `rect_area` which calculates the area of a rectangle
+ * (try using nested destructuring).
+ */
+
+
+
 /* `main()`
  *
  * A lot happens in here, including a variety of ways to assign data,
