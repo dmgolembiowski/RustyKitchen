@@ -1,0 +1,17 @@
+Structs:
+https://doc.rust-lang.org/stable/rust-by-example/custom_types/structs.html
+
+Destructuring Tuples:
+https://doc.rust-lang.org/stable/rust-by-example/flow_control/match/destructuring/destructure_tuple.html
+
+Methods:
+https://doc.rust-lang.org/beta/rust-by-example/fn/methods.html
+
+Tuples (By Example):
+https://doc.rust-lang.org/rust-by-example/primitives/tuples.html
+
+Vectors:
+http://xion.io/post/code/rust-for-loop.html
+
+Vectors (vec!) macro:
+https://doc.rust-lang.org/std/vec/struct.Vec.html

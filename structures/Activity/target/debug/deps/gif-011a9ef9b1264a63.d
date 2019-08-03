@@ -1,0 +1,13 @@
+/home/david/code/venvs/RustyKitchen/structures/Activity/target/debug/deps/gif-011a9ef9b1264a63.rmeta: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/traits.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/common.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/util.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/decoder.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/encoder.rs
+
+/home/david/code/venvs/RustyKitchen/structures/Activity/target/debug/deps/libgif-011a9ef9b1264a63.rlib: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/traits.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/common.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/util.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/decoder.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/encoder.rs
+
+/home/david/code/venvs/RustyKitchen/structures/Activity/target/debug/deps/gif-011a9ef9b1264a63.d: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/traits.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/common.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/util.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/decoder.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/encoder.rs
+
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/lib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/traits.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/common.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/util.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/mod.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/reader/decoder.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/gif-0.10.2/src/encoder.rs:

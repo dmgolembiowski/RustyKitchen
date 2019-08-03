@@ -1,0 +1,51 @@
+python = "0.0.0" # Python. python_mixin = "0.0.0" # Deprecated in favour of `external_mixin`. Use Python to generate your Rust, right in you… py-spy = "0.1.11" # 
+Sampling profiler for Python programs python-launcher = "0.7.2" # The Python launcher for UNIX pyo3 = "0.7.0" # Bindings to Python interpreter pyo3-pack = 
+"0.7.0-beta.2" # Build and publish crates with pyo3, rust-cpython and cffi bindings as well as rust binar… cpython = "0.3.0" # Bindings to Python pylauncher = 
+"0.1.1" # Python Launcher for POSIX external_mixin = "0.0.1" # Use your favourite interpreted language to generate your Rust, right in your Rust. Suppo… pyoxidizer = 
+"0.2.0" # Package self-contained Python applications python-config-rs = "0.1.2" # Python distribution information via python3-config.  This crate provides a Rust 
+interfac… iter-python = "0.9.2" # Python generator expressions and 'list' comprehensions retworkx = "0.0.9" # A python graph library implemented in Rust px8 = 
+"0.0.4" # Open source fantasy console in Rust python_rub = "0.0.3" # Rust Builder for Python python-json-read-adapter = "0.1.0" # A crate that adds a read adapter to 
+deal with bad Python caused JSON payloads (NaNs and … external_mixin_umbrella = "0.0.2" # Backing library for `rust_mixin` and `external_mixin` to keep them DRY. 
+rust_mixin = "0.0.1" # Yo dawg, use Rust to generate Rust, right in your Rust. (See `external_mixin` to use scr… inline-python = "0.3.1" # Inline Python code 
+directly in your Rust code pythonic = "0.3.0" # pythonic is a Rust AST builder that generates Python orkhon = "0.1.0" # Machine Learning Inference Framework and 
+Server Runtime peroxide = "0.12.3" # Rust numeric library contains linear algebra, numerical analysis, statistics and machine… cpython-json = "0.3.0" # Converts 
+native Python objects into serde_json Values and back again serde_python = "0.1.1" # Uses serde to convert structs to Python taxonomy = "0.3.1" # Routines for 
+loading, saving, and manipulating taxonomic trees reproto-backend-python = "0.3.36" # Rethinking Protocol Generators inline-python-macros = "0.3.1" # Macros for the 
+inline-python crate python-parser = "0.1.0" # A complete Python parser based on nom. serde_python_derive = "0.1.1" # Uses serde to convert structs to Python 
+aws_kms_crypt = "0.1.0" # Library for encrypting and decrypting secrets within the AWS ecosystem. python3-sys = "0.3.0" # FFI Declarations for Python 3 cute = 
+"0.3.0" # A macro for Python-esque comprehensions cdshealpix = "0.3.0" # Rust implementation of the HEALPix tesselation. codeviz_python = "0.2.2" # Flexible code 
+generator for Rust py-comp = "0.1.3" # A macro implementing a Python-like generator expression rumbrella-rdk-vm-python = "0.1.0" # Part of the rumbrella project - 
+more to come python27-sys = "0.3.0" # FFI Declarations for Python 2.7 symbolic = "6.1.3" # A library to symbolicate and process stack traces from native 
+applications, minidumps, U… pyo3-file = "0.2.0" # A small helper library for working with python file-like objects with rust cargo-make = "0.21.0" # Rust task runner 
+and build tool. py_literal = "0.2.0" # Read and write Python literals dmenv = "0.16.1" # Simple and practical virtualenv manager for Python badtouch = "0.7.0" # 
+Scriptable network authentication cracker matplotrust = "0.1.7" # A simple wrap around Python's matplotlib. dqcsim = "0.0.4" # DQCsim: Delft Quantum Classical 
+Simulator spell = "0.1.6" # Spell is a Streaming Parser for Event Logs using an LCS (Longest Common Subsequence) mask = "0.5.0" # A CLI task runner defined by a 
+simple markdown file autojump = "0.4.0" # A Rust port and drop-in replacement of autojump lexical-core = "0.4.3" # Lexical, to- and from-string conversion routines. 
+requests = "0.0.30" # Rust HTTP client API styled after awesome Python requests - [WORK IN PROGRESS] mailchecker = "3.2.35" # Cross-language temporary 
+(disposable/throwaway) email detection library. Covers 2740 fak… adorn = "0.2.1" # A plugin to provide python-style decorators in Rust cordoba = "0.3.1" # Zero-copy 
+and mmapable CDB access library with a Python interface mapcomp = "0.1.3" # Python-like list comprehensions for standard containers pyo3-built = "0.2.0" # Expose 
+build variables obtained with built as a PyDict py-fossil-delta = "0.1.1" # Provides functions for calculating differences between strings and applying calculated d… 
+subprocess = "0.1.18" # Execution of child processes and pipelines, inspired by Python's subprocess module, with… serde-pickle = "0.5.0" # A serde-based 
+serialization library for Python's pickle format sequoia-openpgp = "0.9.0" # OpenPGP data types and associated machinery nobs-vk = "0.2.0" # A very basic, non rich 
+wrapper for binding vulkan commands and extension loading finch = "0.2.0" # An implementation of min-wise independent permutation locality sensitive hashing ('MinHa… 
+svg2polylines = "0.5.1" # Convert SVG data to a list of polylines (aka polygonal chains or polygonal paths). lando = "0.2.1" # Rust http interface for AWS lambda API 
+gateway events redeye = "0.2.1" # Parse Apache-style access logs into Logstash JSON p = "0.0.0" # Rust package for Python pyrus-nn = "0.2.1" # Micro Neural Network 
+framework lando-attr = "0.2.1" # Rust http interface for AWS lambda API gateway events (attr macros) cordoba-py = "0.3.1" # Cordoba Python interface djangohashers = 
+"1.0.1" # A Rust port of the password primitives used in Django project. emcee = "1.0.0-alpha.2" # Implementation of Python's emcee affine-invariant mcmc ensemble 
+sampler translator = "0.3.0" # A procedural macro which translates your repr-C structs into C++, Python and C# at compi… crowbar = "0.2.0" # Wrapper to simplify 
+writing AWS Lambda functions in Rust (using the Python execution env… vtext = "0.1.0-alpha.2" # NLP with Rust libsel4-sys = "0.5.2" # Builds the sel4 kernel and 
+generates Rust bindings around it, as configured by a feL4 ma… list_builder = "0.0.2" # Python-like list comprehensions in Rust blocktest = "0.1.1" # library for 
+high quality syntax highlighting and code intelligence using Sublime Text's … fstrings = "0.1.3" # Python3 fstring interpolation in Rust yamlate = "0.1.1" # A 
+cross-language interpreter library that dynamically evaluates YAML attributes given va… stringmap = "0.1.0" # An immutable string map with pointers into frozen 
+memory that can be shared between C, R… pyo3cls = "0.7.0" # Proc macros for PyO3 package pyo3-derive-backend = "0.7.0" # Code generation for PyO3 package numpy = 
+"0.6.0" # Rust binding of NumPy C-API strfmt = "0.1.6" # strfmt: rust library for formatting dynamic strings point_process = "0.11.0" # A crate for simulating random 
+point processes. argparse-rs = "0.1.0" # A simple argument parser, meant to parse command line input. It is inspired by the Pytho… turtle = "1.0.0-rc.2" # Learn the 
+Rust language by creating animated drawings! djpass = "1.0.0" # A command-line tool to generate and verify passwords used in Django project. 
+systemd-crontab-generator = "1.0.2" # Systemd generator for crontab files support kudubot-bindings = "0.18.2" # Rust Bindings for the kudubot framework 
+auto-image-cropper = "0.1.5" # Removes extra white borders to correctly resize canvas thinline = "0.3.1" # A parser and builder for function-unittests written in 
+comment sections for C-language f… osuparse = "2.0.1" # Crate for parsing osu! beatmaps. yamlette = "0.0.8" # Comprehensive and user friendly YAML 1.2 processor kipa 
+= "0.1.2" # Distributed Key to IP Address (KIPA) query network easy_strings = "0.2.0" # Ergonomic, garbage collected strings for Rust subprocess-communicate = 
+"0.2.2" # Provides a communicate primitive similar to python's subprocess.Popen.communicate that a… dict_derive = "0.1.1" # Derive macros for some PyO3 traits to 
+convert python dicts into rust structs ipv8 = "0.1.0" # IPv8 implementation for rust. sarek = "0.1.0" # A work-in-progress, experimental neural network library 
+utilizing TensorFlow Keras rpgtools = "0.2.0-alpha" # Collection of utilities to help run tabletop role-playing games ... and 386 crates more (go to 
+https://crates.io/search?q=python to see more)

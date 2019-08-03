@@ -1,0 +1,1 @@
+{"rustc":5632553715040628694,"features":"","target":0,"profile":0,"path":0,"deps":[[6540996370651137916,"build_script_build",false,1172288636430051120]],"local":[{"RerunIfChanged":{"output":"output","paths":["src/codegen/mod.rs","src/codegen/error.rs","src/codegen/helpers.rs","src/codegen/struct_layout.rs"]}}],"rustflags":[],"metadata":0}
