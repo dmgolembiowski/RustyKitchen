@@ -1,0 +1,15 @@
+# Single statement for getting an integer from input
+```
+use std::io;
+
+fn main() {
+    let stdin_int => {
+        let mut stdin_str = String::new();
+        io::stdin().read_line(&mut stdin_str)
+            .expect("ValueError: Must be a valid string of UTF-8 literals");
+    let _int: u32 = stdin_str.parse();
+    println!("You entered: {}", _int);
+    }
+
+    stdin_int();
+}

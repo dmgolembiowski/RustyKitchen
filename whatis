@@ -2,5 +2,23 @@ Rust
 ----
 
 1. What is `shadowing`?
+    Shadowing is effectively creating a new variable 
+    when using a pattern with the `let` keyword, like:
+        
+        fn main() {
+            let x = 5; 
+            let x = x + 1; // For emphasis, not writing x += 1
+            let x = x * 2;
+        }
 
+    but unlike a context using a mutable expression, like:
+
+        fn main() {
+            let mut spaces = "   ";
+            spaces = spaces.len();
+        }
+
+    then the compiler raises a compile-time error hinting that
+    we weren't allowed to mutate a variable's type, as evidenced 
+    by the Err("mismatched types") that shows up.
 
