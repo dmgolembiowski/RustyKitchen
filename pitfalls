@@ -5,3 +5,17 @@
     "x.0", whereas array elements are accessed via `array_name[index_no]`,
     implies "x[0]".
 
+3. Things might break if/when arms of an if-statement evaluate to
+    inconsistent types, i.e. a string or an integer:
+
+        fn main() {
+            let condition = true;
+            let number = if condition {
+                5
+            } else {
+                "six"
+            };
+            prinln!("The value of number is {}", number);
+        }
+
+4. 
