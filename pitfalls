@@ -1,1 +1,7 @@
-Be careful! Strings use full quotes, like "abc". Characters use the single-quotes, like 'a'.
+1. Be careful! Strings use full quotes, like "abc". Characters 
+    use the single-quotes, like 'a'.
+
+2. Tuple elements are accessed via `tuple_name.slice_no` syntax, like
+    "x.0", whereas array elements are accessed via `array_name[index_no]`,
+    implies "x[0]".
+
