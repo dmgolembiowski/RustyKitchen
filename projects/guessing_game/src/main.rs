@@ -1,25 +1,57 @@
+extern crate rand;
+
 use std::io;
-/* Like C#, could have done 
- * `use std::io::stdin;` at
- * the top to just call
- * `stdin()` at the bottom.
- */
+use std::cmp::Ordering;
+use rand::Rng;
+
 fn main() {
-    println!("Guess the number");
-    println!("Please input your guess.");
+    let secret_number = rand::thread_rng()
+        .gen_range(1, 4);
 
-    let mut guess = String::new(); //`String` -> "growable" & UTF-8 encoded text
-
-    // Call std::io::Stdin().read_line()
-
-    io::stdin().read_line(&mut guess)
-        .expect("Failed to read line");
-    /* `io::stdin()` returns an instance of `std::io::Stdin`,
-     * a type representing a handle to the STDIN for bash. */
-
-    /* The mysterious `&` used in `&mut guess`
-     * assigns a reference to a mutable copy
-     * of the immutable variable `guess`*/
-
-    println!("You guessed: {}", guess);
+    let mut guess = String::new();
+    let checker = |s_n: u32| -> bool {
+            match s_n.cmp(&secret_number) {
+                Ordering::Less => {
+                    println!("Low");
+                    return false;
+                },
+                Ordering::Greater => {
+                    println!("High");
+                    return false;
+                },
+                Ordering::Equal => {
+                    println!("You win!");
+                    return true;
+                }
+            }
+        };
+    loop {
+        println!("Please type a number: ");
+        io::stdin().read_line(&mut guess)
+            .expect("Failed to read line.");
+        /*
+        let checker = |s_n: u32| {
+            match s_n.cmp(&secret_number) {
+                Ordering::Less => println!("Low"),
+                Ordering::Greater => println!("High"),
+                Ordering::Equal => {
+                    println!("You win!");
+                },
+            }
+        }; */
+        match guess
+            .trim()
+            .parse() {
+                Ok(valid_u32_thing) => {
+                    println!("You entered {}", guess);
+                    if checker(valid_u32_thing) {
+                        break;
+                    } else { continue; } // This does not work, need a `pass` statement
+                },
+                Err(_) => {
+                    println!("You entered {}", guess);
+                    continue;
+                },
+            };
+    }
 }
