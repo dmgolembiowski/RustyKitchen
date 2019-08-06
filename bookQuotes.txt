@@ -1,0 +1,5 @@
+"When functions have references [fn name(thing: &Type){}] as parameters 
+instead of the actual values, we don’t need to return the values in 
+order to give back ownership, because we never had ownership."
+
+
