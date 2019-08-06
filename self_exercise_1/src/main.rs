@@ -1,3 +1,14 @@
+
+
+fn main_two() -> <(&str, &str)> {
+    let mut s = "hell no";
+    let mut r1 = &s[0..3];
+    let mut r2 = &s[5..6];
+
+    // Testing if my syntax is correct for chaining a ref
+    (r1, r2)
+}
+
 fn main() {
     println!("true AND false is {}", true && false);
     
@@ -26,4 +37,6 @@ fn main() {
     println!("0x80 >> 2 is 0x{:x}", 0x80u32 >> 2);
     
     println!("Use underscores to improve readability, like 1_000_000u32 = {}", 1_000_000u32);
+
+    let tuple1 = main_two();
 }
