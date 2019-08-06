@@ -18,4 +18,49 @@
             prinln!("The value of number is {}", number);
         }
 
-4. 
+4. Attempting to modify referenced values doesn't go well
+
+    
+        fn main() {
+            let s = String::from("hello");
+
+            change(&s);
+
+        }
+
+
+        fn change(some_string: &String) {
+            some_string.push_str(", world");
+        }
+
+        // err: cannot borrow immutable borrowed content 
+        // `*some_string` as mutable
+
+    Just as variables are immutable by default, so are 
+    references. We cannot modify something we have a ref to.
+
+5. Cannot mutate two references in one datum in a particular scope!
+
+        fn main() {
+            let mut s = String::from("hello");
+
+            let r1 = &mut s;
+            let r2 = &mut s;
+
+        }
+
+        fn change(some_string: &mut String) {
+            some_string.push_str(", world");
+        }
+
+        /* 
+            Doing this naive implementation of ref mutation
+            is blocked by the language to prevent data races
+            at compile time, specifically to stop:
+            ~ Two or more pointers from accessing the same
+                data at the same time;
+            ~ At least one of the pointers from being used to
+                write to the data;
+            ~ There's no mechanism being used to synchronize
+                access to the data.
+        */
