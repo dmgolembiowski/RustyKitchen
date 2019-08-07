@@ -1,0 +1,11 @@
+The problem with null values is that if you try to use a null value as a not-null value, you’ll get an error of some kind. Because this null or not-null property is pervasive, it’s
+extremely easy to make this kind of error.
+However, the concept that null is trying to express is still a useful one: a null is a value that is currently invalid or absent for some reason.
+The problem isn’t really with the concept but with the particular implementation. As such,
+
+
+Rust does not have nulls
+
+, but it does have an enum that can encode the concept of a
+value being present or absent. This enum is Option<T> , and it is dened by the standard
+library as follows: ...
