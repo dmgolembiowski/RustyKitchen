@@ -22,3 +22,6 @@ Rust
     we weren't allowed to mutate a variable's type, as evidenced 
     by the Err("mismatched types") that shows up.
 
+
+2. In practical terms, when and how does one use `Option<{T}>`, `None`, and `Some({})`?
+
