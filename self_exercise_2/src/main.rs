@@ -4,12 +4,9 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    fn can_hold(&self, rect2: &Rectangle) {
-        if self.width <= rect2.width && self.height <= rect2.height {
-            true;
-        } else {
-            false;
-        }
+    fn can_hold(&self, rect2: &Rectangle) -> bool {
+        // I was pretty close, here's the actual working line:
+        self.width <= rect2.width && self.height <= rect2.height
     }
 }
 
@@ -27,5 +24,4 @@ fn main() {
     };
 
     let result = r2.can_hold(&r1);
-    result
 }
