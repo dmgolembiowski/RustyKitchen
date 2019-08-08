@@ -83,3 +83,16 @@ fn hm() {
     let mut map = HashMap::new();
     map.insert(1,2);
 }
+
+# Providing New Names with the `as` Keyword
+```
+use std::fmt::Result;
+use std::io::Result as IoResult;
+
+fn func1() -> Result {
+    // ---
+}
+
+fn func2() -> IoResult<()> {
+    // ---
+}
