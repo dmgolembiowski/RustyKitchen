@@ -1,4 +1,3 @@
-#[allow(dead_code)]
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {
@@ -15,7 +14,6 @@ mod front_of_house {
     }
 }
 
-#[allow(dead_code)]
 pub fn eat_eat_restaurant() {
     // Absolute path
     crate::front_of_house::hosting::add_to_waitlist();
@@ -24,14 +22,17 @@ pub fn eat_eat_restaurant() {
     front_of_house::hosting::add_to_waitlist();
 }
 
-#[allow(dead_code)]
 fn serve_order() {}
 
-#[allow(dead_code)]
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
         seasonal_fruit: String,
+    }
+
+    pub enum Appetizer {
+        Soup,
+        Salad
     }
 
     impl Breakfast {
@@ -61,6 +62,12 @@ pub fn eat_at_restaurant() {
      * not allowed to see or modify the private field */
     // meal.seasonal_fruit = String::from("blueberries");
 }
+
+pub fun order_two_appetizers() {
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
+}
+
 
 #[cfg(test)]
 mod tests {
