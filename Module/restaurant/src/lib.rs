@@ -29,12 +29,37 @@ fn serve_order() {}
 
 #[allow(dead_code)]
 mod back_of_house {
+    pub struct Breakfast {
+        pub toast: String,
+        seasonal_fruit: String,
+    }
+
+    impl Breakfast {
+        pub fn summer(toast: &str) -> Breakfast {
+            toast: String::from(toast),
+            seasonal_fruit: String::from("peaches"),
+        }
+    }
+
     fn fix_incorrect_order() {
         cook_order();
         super::serve_order();
     }
 
     fn cook_order() {}
+}
+
+pub fn eat_at_restaurant() {
+    // Order a breakfast in the summer with Rye toast
+    let mut meal = back_of_house::Breakfast::summer("Rye");
+
+    // Change our mind about what bread we'd like
+    meal.toast = String::from("Wheat");
+    println!("I'd like to order {} toast please", meal.toast);
+
+    /* The following thing won't be compiled since
+     * not allowed to see or modify the private field */
+    // meal.seasonal_fruit = String::from("blueberries");
 }
 
 #[cfg(test)]
