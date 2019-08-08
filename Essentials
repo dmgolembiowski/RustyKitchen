@@ -96,3 +96,8 @@ fn func1() -> Result {
 fn func2() -> IoResult<()> {
     // ---
 }
+```
+# Import globbing
+```
+use std::collections::*;
+```
