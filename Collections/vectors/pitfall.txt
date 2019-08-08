@@ -1,0 +1,9 @@
+let mut v = vec![1,2,3,4];
+let first = &v[0];
+v.push(6);
+println!("The first element is {}", first);
+
+^
+|
+This violates the borrow-checking rule that enforces
+"no having mutable and immutable references in the same scope"
