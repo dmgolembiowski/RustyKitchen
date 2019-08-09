@@ -1,0 +1,3 @@
+Have you considered
+trying something else to do for fun
+besides torturing yourself with Rust?
