@@ -101,3 +101,15 @@ fn func2() -> IoResult<()> {
 ```
 use std::collections::*;
 ```
+
+# Concatenating Strings
+# The Short Way:
+
+```
+let this_p = String::from("hello, ");
+let art = String:: from("it's me.");
+let this_part = &this_p+&art;
+// Can use & for a reference if desired
+
+# The Other Way:
+let this_other_part = format!("{}{}", this_p, art);
