@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 use std::io::Write;
 use std::process::{Command, Stdio};
-
+use std::fail
 fn run() -> Result<()> {
     let mut child = Command::new("python").stdin(Stdio::piped())
         .stderr(Stdio::piped())
@@ -27,4 +27,7 @@ fn run() -> Result<()> {
         let err = String::from_utf8(output.stderr)?;
         bail!("External command failed:\n {}", err)
     }
+}
+fn main() {
+    run()
 }

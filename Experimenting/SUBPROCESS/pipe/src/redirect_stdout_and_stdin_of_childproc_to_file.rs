@@ -7,7 +7,7 @@ fn main() -> Result<(), Error> {
     let errors = outputs.try_clone()?;
 
     Command::new("ls")
-        .args(&[".", "oops"])
+        .args(&["-lah"])
         .stdout(Stdio::from(outputs))
         .stderr(Stdio::from(errors))
         .spawn()?
