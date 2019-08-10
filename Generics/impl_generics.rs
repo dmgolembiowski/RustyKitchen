@@ -3,6 +3,13 @@ impl<T> Point<T> {
     fn x(&self) -> &T {
         &self.x
     }
+    // Nevermind, not as cool as I thought;
+    // they can't share a name... :(
+    /*
+    fn distance_from_origin(&self) -> &T {
+        (self.x.powi(2) + self.y.powi(2)).sqrt()
+    }
+    */
 }
 
 impl Point<f32> {
