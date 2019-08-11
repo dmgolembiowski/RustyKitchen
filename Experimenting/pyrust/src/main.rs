@@ -1,5 +1,7 @@
 #![feature(proc_macro_hygiene)]
 use inline_python::python;
+pub mod context;
+
 fn main() {
     println!("Hello, world!");
     let who = "world";
@@ -10,4 +12,6 @@ fn main() {
         print("Goodbye")
     }
 
+    // Calling context.rs
+    context::test();
 }
