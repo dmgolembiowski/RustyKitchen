@@ -1,7 +1,7 @@
 # RustyKitchen
 This might be my new "thing".
 
-Resume reading on page 217/618
+Resume reading on page 284/618
 
 To do:
 Get the implementation for Generics/.../src/lib.rs
