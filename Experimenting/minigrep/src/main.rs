@@ -1,26 +1,6 @@
 use std::env;
-use std::fs;
 use std::process;
-use std::error::Error;
-
-struct Configuration {
-    query: String,
-    filename: String,
-}
-
-impl Configuration {
-    fn new(args: &[String]) -> Result<Configuration, &'static str> {
-        if args.len() < 3 {
-            return Err("\n \
-                Suggested usage: cargo run [string] [file location] \
-            \n");
-        }
-        let query = args[1].clone();
-        let filename = args[2].clone();
-    
-        Ok(Configuration { query, filename })
-    }
-}
+use minigrep::Configuration;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -33,16 +13,10 @@ fn main() {
     println!("Searching for {}", &config.query);
     println!("In file: {}", &config.filename);
 
-    if let Err(e) = run(config) {
+    if let Err(e) = minigrep::run(config) {
         println!("Application error: {}", e);
         process::exit(1);
     }
 
 }
 
-fn run(config: Configuration) -> Result<(), Box<dyn Error>> {
-    let contents = fs::read_to_string(config.filename)?;
-
-    println!("With text:\n{}", contents);
-    Ok(())
-}
