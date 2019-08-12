@@ -17,10 +17,18 @@ pub trait Summary {
     }
 }
 
-pub fn notify(item: impl Summary) {
+pub fn notify(item: &impl Summary) {
     println!("Breaking News! {}", item.summarize());
 }
 
+pub fn bulk_notify<T: Summary>(item1: T, item2: T) {
+    println!("Incoming bulk announcement:");
+    //notify(item1);
+    //notify(item2);
+    for item in vec![item1, item2] {
+        notify(&item);
+    }
+}
 pub struct NewsArticle {
     pub headline: String,
     pub location: String,
