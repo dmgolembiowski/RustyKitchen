@@ -3,6 +3,14 @@
 #[allow(dead_code)]
 ```
 
+# Anonymous closure
+```
+// Defining a closure and storing it in the expensive_closure var
+let expensive_closure = |num| {
+    println!("calculating slowly...");
+    std::thread()::sleep(std::time::Duration::from_secs(2));
+    num
+};
 # Single statement for getting an integer from input
 ```
 use std::io;
