@@ -1,0 +1,3 @@
+When testing, remember that if you want to see the 
+printed values for passing tests, use the command:
+`$ cargo test -- --nocapture`
