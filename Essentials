@@ -3,7 +3,21 @@
 #[allow(dead_code)]
 ```
 
-# Anonymous closure
+# Closure (Similar to Lambda Expressions) Syntax
+```
+// Not a closure:
+fn add_one_1 (x: u32) -> u32 {x+1}
+
+// Closures:
+let add_closure = |x, y| x + y;
+let add_one     = |x| x + 1;
+
+// Verbose Closures (Unnecessary):
+let add_one_v2 = |x| { x + 1 };
+let add_one_v3 = |x: u32| -> u32 { x + 1 };
+```
+
+# Excessive closure
 ```
 // Defining a closure and storing it in the expensive_closure var
 let expensive_closure = |num| {
