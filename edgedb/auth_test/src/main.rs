@@ -29,7 +29,7 @@ pub fn login<'s>(
             def __new__(cls):
                 host = os.getenv("EDGEDB_HOST")
                 port = os.getenv("EDGEDB_PORT")
-                user = os.getenv("EDGEDB_USER")
+                user = os.getenv("EDGEDB_ADMIN")
                 password = os.getenv("EDGEDB_PWD")
                 database = os.getenv("EDGEDB_DATABASE")
                 timeout = os.getenv("EDGEDB_TIMEOUT")
