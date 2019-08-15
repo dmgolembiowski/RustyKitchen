@@ -1,0 +1,13 @@
+[package]
+name = "auth_test"
+version = "0.1.0"
+authors = ["David Golembiowski <dmgolembiowski@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+python = "0.0.0"
+pyo3 = "0.7.0"
+json-rust = "0.1.0"
+inline-python = "0.3.1"
