@@ -23,7 +23,7 @@ pub fn login<'s>(
                 self.database = database
                 self.password = password
                 self.timeout = timeout
-                self.json_string = ''
+                self.json_string = ""
 
             @classmethod
             def __new__(cls):
@@ -51,7 +51,7 @@ pub fn login<'s>(
 
             async def run():
                 con = await edgedb.async_connect(dsn=env.dsn)
-                
+                con.
             def wrapper():
  
         output = main()
