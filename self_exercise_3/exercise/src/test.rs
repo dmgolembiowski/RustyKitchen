@@ -2,12 +2,14 @@ use std::thread;
 use std::time::Duration;
 use std::collections::HashMap;
 
+type Things = mut HashMap<u32, u32>;
 
 struct Cacher<T>
     where T: Fn(u32) -> u32 
 {
     calculation: T,
     value: Option<u32>,
+    things: super::Things,
 }
 
 impl<T> Cacher<T>
@@ -17,6 +19,7 @@ impl<T> Cacher<T>
         Cacher {
             calculation,
             value: None,
+            things: 
         }
     }
 
@@ -30,6 +33,8 @@ impl<T> Cacher<T>
             },
         }
     }
+
+    fn add_to_things(&mut self, key: &mut u32, value: &mut u32) {}
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
