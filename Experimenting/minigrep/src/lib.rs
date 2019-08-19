@@ -8,6 +8,7 @@ pub struct Configuration {
     pub case_sensitive: bool,
 }
 
+#[allow(dead_code)]
 impl Configuration {
     pub fn new(args: &[String]) -> Result<Configuration, &'static str> {
         if args.len() < 3 {
@@ -21,6 +22,8 @@ impl Configuration {
 
         Ok(Configuration { query, filename, case_sensitive })
     }
+
+    pub fn other_new() {}
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
