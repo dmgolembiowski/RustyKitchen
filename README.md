@@ -1,9 +1,12 @@
 # RustyKitchen
-This might be my new "thing".
 
-Resume reading on page 335/593
+Resume reading on page 335/593 
+Chapter 13 Functional Language Features: Iterators and Closures
+Section 2  Processing a Series of Items with Iterators
+
+
 To do:
-
++ Finish the chapter!
 
 Interesting Finds:
 ------------------
