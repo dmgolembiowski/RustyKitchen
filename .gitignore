@@ -16,3 +16,7 @@
 **/*.rs.bk
 
 # End of https://www.gitignore.io/api/rust
+#
+#
+# Ignore wasm-pack for Web Assembly Section
+rustwasm/wasm-game-of-life/
