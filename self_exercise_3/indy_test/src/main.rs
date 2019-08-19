@@ -5,7 +5,6 @@ struct Cache<T>
     where T: Fn(u32) -> u32
 {
     calculation: T,
-    value: Option<u32>,
     internal: HashMap<u32, u32>
 }
 
@@ -16,7 +15,6 @@ impl<T> Cache<T>
     fn new(calculation: T) -> Cache<T> {
         Cache {
             calculation,
-            value: None,
             internal: HashMap::new(),
         }
     }
@@ -31,13 +29,6 @@ impl<T> Cache<T>
     }
 
     fn value(&mut self, arg: u32) -> u32 {
-        /*if self.internal.contains_key(&arg) {
-            Some(self.get(&arg))
-        } else {
-            let v = self.calculation(&arg);
-            self.set(arg, &(self.calculation)(arg));
-            Some(self.internal[*arg])
-        }*/
         match self.internal.contains_key(&arg) {
             true => {
                 self.get(arg)
@@ -48,6 +39,15 @@ impl<T> Cache<T>
             },
         }
     }
+}
+
+#[allow(dead_code)]
+#[test]
+fn call_with_different_values() {
+    let mut c = Cache::new(|a| a);
+    let _v1 = c.value(1);
+    let v2 = c.value(2);
+    assert_eq!(v2, 2);
 }
 
 fn main() {
