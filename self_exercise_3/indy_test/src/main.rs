@@ -1,10 +1,9 @@
 use std::collections::HashMap;
 
-#[allow(dead_code)]
 struct Cache<T> 
     where T: Fn(u32) -> u32
 {
-    calculation: T,
+    lambda_expression: T,
     internal: HashMap<u32, u32>
 }
 
@@ -12,9 +11,9 @@ struct Cache<T>
 impl<T> Cache<T>
     where T: Fn(u32) -> u32
 {
-    fn new(calculation: T) -> Cache<T> {
+    fn new(lambda_expression: T) -> Cache<T> {
         Cache {
-            calculation,
+            lambda_expression,
             internal: HashMap::new(),
         }
     }
@@ -34,8 +33,7 @@ impl<T> Cache<T>
                 self.get(arg)
             },
             false => {
-                //let calculation = self.calculation;
-                self.set(arg, (self.calculation)(arg))
+                self.set(arg, (self.lambda_expression)(arg))
             },
         }
     }
