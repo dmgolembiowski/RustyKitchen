@@ -6,6 +6,7 @@ struct Shoe {
 
 fn shoes_in_my_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter()
+        // Business logic gets defined via RHS of a closure in .filter
         .filter(|s| s.size == shoe_size)
         .collect()
 }

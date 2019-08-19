@@ -1,8 +1,7 @@
 # RustyKitchen
 This might be my new "thing".
 
-Resume reading on page 332/593
-
+Resume reading on page 335/593
 To do:
 
 
