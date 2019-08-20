@@ -1,0 +1,11 @@
+Box<T>
+- Allows you to store data on the heap rather than the stack;
+- Likely limited to use in only the following circumstances:
+    1.) "When you have a type whose size can't be known at compile time and you want to use a value of that type in a context that requires an exact size"
+        --> Could this resemble the data an incoming email body? 
+        --> ................... a container of data receiving from an incoming client socket connection?
+    2.) "When you have a large amount of data and you want to transfer ownership but ensure the data won't be copied when you do so"
+        --> The training phase of a Training Cycle in machine learning (depending on the topology)?
+    3.) "When you want to own a value and you care only that it's a type that implements a particular (non-generic?) trait rather than being a specific type?
+        --> (No idea)
+
