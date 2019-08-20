@@ -1,6 +1,6 @@
 # RustyKitchen
 
-Resume reading on page 369/593
+Resume reading on page 387/593
 <br></br>
 Chapter 15 Smart Pointers
 <br></br>
