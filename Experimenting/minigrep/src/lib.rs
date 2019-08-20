@@ -23,9 +23,24 @@ impl Configuration {
         Ok(Configuration { query, filename, case_sensitive })
     }
 
-    pub fn other_new() {}
-}
+    pub fn new_new(mut args: std::env::Args) -> Result<Configuration, &'static str>{
+        args.next(); // dump the `rustc <package>` command
 
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string"),
+        };
+        
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a file name"),
+        };
+
+        let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
+        
+        Ok(Configuration { query, filename, case_sensitive })
+    }
+}
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     /* The lifetime "<'a>" parameter is a placeholder
      * for indicating which argument 
@@ -47,9 +62,14 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
         if line.contains(query) {
             results.push(line);
         }
-    }
-    
+    } 
     results
+}
+
+pub fn new_search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    contents.lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
@@ -92,6 +112,22 @@ Duct tape.";
             vec!["safe, fast, productive."],
             search(query, contents)
         );
+    }
+
+    #[test]
+    fn audio_decode() {
+        let buffer: &mut [i32];
+        let coefficients: [i64; 12];
+        let qlp_shift: i16;
+
+        for i in 12..buffer.len() {
+            let prediction = coefficients.iter()
+                                        .zip(&buffer[i - 12..i])
+                                        .map(|(&c, &s)| c * s as i64)
+                                        .sum::<i64>() >> qlp_shift;
+            let delta = buffer[i];
+            buffer[i] = prediction as i32 + delta;
+        }
     }
 
     #[test]

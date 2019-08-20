@@ -1,10 +1,10 @@
 # RustyKitchen
 
-Resume reading on page 335/593
+Resume reading on page 369/593
 <br></br>
-Chapter 13 Functional Language Features: Iterators and Closures
+Chapter 15 Functional Language Features: Iterators and Closures
 <br></br>
-Section 2  Processing a Series of Items with Iterators
+Section 1 Using Box to Point to Data on the Heap
 <br></br>
 
 To do:
