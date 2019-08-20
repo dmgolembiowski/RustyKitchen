@@ -8,8 +8,10 @@ Section 1 Using Box to Point to Data on the Heap
 <br></br>
 
 To do:
++ ++ Find examples of situations where the three rules of deref coercion are demonstrated (maybe create some)
 + Notate *interior mutability* patterns
 + Notate *reference cycles*
+
 Interesting Finds:
 ------------------
 "if let" versus "match": They are basically the same thing, except 
