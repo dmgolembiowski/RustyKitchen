@@ -8,8 +8,8 @@ Section 1 Using Box to Point to Data on the Heap
 <br></br>
 
 To do:
-+ Finish the chapter!
-
++ Notate *interior mutability* patterns
++ Notate *reference cycles*
 Interesting Finds:
 ------------------
 "if let" versus "match": They are basically the same thing, except 
