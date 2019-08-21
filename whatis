@@ -24,4 +24,20 @@ Rust
 
 
 2. In practical terms, when and how does one use `Option<{T}>`, `None`, and `Some({})`?
+    (Future self responding to this question) Here's the basic rundown:
+    Option<T>, not Option<{T}>, is a useful struct for preventing null pointer references.
+    For example, say we had an enum called "List" to hold the different kinds of 
+    abstract characteristics for a python list, like mutability, length, partial equality, etc.
+    Then, in the return signature of a function, or in the type annotation of a struct property,
+    we might say something like:
+
+        enum Thing {
+            Property(str, Option<List>,
+            ...
+        }
+
+    which accounts for the possibility that either nothing could be present in Property(), or 
+    instead a characterstic of type `List` is present.
+
+3. "What is *interior mutability* again?"
 

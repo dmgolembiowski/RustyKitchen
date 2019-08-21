@@ -27,6 +27,11 @@ class __cons__:
             load.append(__cons__.onto[onto])
         return (z for z in load)
 
+    def pop(self):
+        popped = self.x
+        self = cons(self.y, __cons__.onto[self.y._id])
+        return popped
+
 def cons(x, y=None):
     if y:
         try:
