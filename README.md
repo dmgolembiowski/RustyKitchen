@@ -1,10 +1,10 @@
 # RustyKitchen
 
-Resume reading on page 395/593
+Resume reading on page 400/593
 <br></br>
 Chapter 15 Smart Pointers
 <br></br>
-Section 1 Using Box to Point to Data on the Heap
+Section ? Having Multiple Owners of Mutable Data by Combining `Rc<T>` and `RefCell<T>`
 <br></br>
 
 To do:

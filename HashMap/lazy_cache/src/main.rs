@@ -11,7 +11,7 @@ impl<T> Cache<T>
     where T: Fn(u32) -> u32
 {
     pub fn new(calculation: T) -> Cache<T> {
-        Cache {
+        Self {
             calculation,
             internal: HashMap::new(),
         }
