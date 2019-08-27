@@ -2,8 +2,6 @@ use std::thread;
 use std::net::{TcpListener, TcpStream, Shutdown};
 use std::io::{Read, Write};
 
-pub fn drop<T>(_turtle: T){ }
-
 fn handle_client(mut stream: TcpStream) {
     let mut data = [0 as u8; 50];
     // using a 50 byte buffer
@@ -11,9 +9,6 @@ fn handle_client(mut stream: TcpStream) {
     while match stream.read(&mut data) {
         Ok(size) => {
             // echo things
-            let message = String::from_utf8_lossy(&data);
-            println!("{}", message);
-            drop(message);
             stream.write(&data[0..size]).unwrap();
             true
         },

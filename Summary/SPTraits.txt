@@ -1,0 +1,3 @@
+Deref // Drop
+------------
+Enable a lot of the functionality of smart pointers as impl

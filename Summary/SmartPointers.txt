@@ -1,0 +1,17 @@
+Regular Reference (&<this: T>)
+------------------------------
+
+
+Smart Pointers
+--------------
++ Box<T>:
+    has a known size and points to data allocated on the heap
++ Rc<T>:
+    keeps track of the number of references to data on the heap
+    so that data can have multiple owners
++ RefCell<T>:
+    (has interior mutability)
+    -offers us a type that we can use when we need an 
+    immutable type but need to change an inner value of that type;
+    -enforces the borrowing rules at runtime instead of compile time
+

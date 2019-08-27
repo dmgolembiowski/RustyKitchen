@@ -13,4 +13,4 @@ async def tcp_echo_client(message):
     writer.close()
     await writer.wait_closed()
 
-asyncio.run(tcp_echo_client("Hello World!"))
+asyncio.run(tcp_echo_client(input()))
