@@ -1,13 +1,13 @@
 # RustyKitchen
 
-Resume reading on page 400/593
+Resume reading on page 451/593
 <br></br>
-Chapter 15 Smart Pointers
-<br></br>
-Section ? Having Multiple Owners of Mutable Data by Combining `Rc<T>` and `RefCell<T>`
+Chapter 17
 <br></br>
 
 To do:
++ Create a program that intentionally creates a memory cycle!
+
 + ++ Find examples of situations where the three rules of deref coercion are demonstrated (maybe create some)
 + Notate *interior mutability* patterns
 + Notate *reference cycles*
