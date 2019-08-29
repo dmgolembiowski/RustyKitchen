@@ -1,5 +1,5 @@
 [package]
-name = "gui_test"
+name = "blog"
 version = "0.1.0"
 authors = ["David Golembiowski <dmgolembiowski@gmail.com>"]
 edition = "2018"

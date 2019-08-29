@@ -1,11 +1,11 @@
 # RustyKitchen
 
-Resume reading on page 451/593
+Resume reading on page 458/593
 <br></br>
-Chapter 17
 <br></br>
 
 To do:
++ Continue working through /Blog/blog/src/lib.rs
 + Create a program that intentionally creates a memory cycle!
 
 + ++ Find examples of situations where the three rules of deref coercion are demonstrated (maybe create some)

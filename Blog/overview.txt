@@ -1,0 +1,8 @@
+Final Functionality:
+1. A blog post starts as an empty draft.
+2. When the draft is done, a review of the post is requested.
+3. When the post is approved, it gets published.
+4. Only published blog posts return content to print, so
+    unapproved ones can't accidentally be published.
+
+
