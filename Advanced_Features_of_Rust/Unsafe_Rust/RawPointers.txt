@@ -1,0 +1,24 @@
+As with refs, raw pointers can be immut or mut,
+and are written as `*const T` and `*mut T`.
+Note: the asterisk isn't the dereference operator;
+it's just party of the type name.
+
+Here, by immutable, we mean that the pointer can't be
+directly assigned to after being dereferenced.
+
+Different from references and smart pointers, raw pointers:
+1. Are allowed to ignore the borrowing rules (shown below) by having
+    both immutable and mutable pointers to the same location;
+
+        Borrowing Rules
+        ---------------
+        A. Any borrow must last for a scope no greater than that of the owner;
+        B. You may have one or the other of these two kinds of borrows, but not both
+            at the same time:
+                I. One or more references (&T) to a resource, T;
+                II. Exactly one mutable reference (&mut T);
+        C. Liveliness
+    
+2. Aren't guaranteed to point to valid memory
+3. Aren't allowed to be null
+4. Don't implement any automatic cleanup
