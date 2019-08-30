@@ -1,0 +1,26 @@
+In this chapter, the following will be covered:
+
+1. Unsafe Rust! 
+    How to opt out of some of Rust's guarantees and take responsibility
+    for manually upholding those guarantees
+
+2. Advanced traits
+    Associated types
+    Default Type Parameters
+    Fully qualified syntax
+    Supertraits
+    Newtype pattern in relation to traits
+
+3. Advanced Types:
+    More about the newtype pattern
+    Type aliases
+    The Never Type
+    Dynamically sized types
+
+4. Advanced functions and closures:
+        Function pointers and returning closures
+
+5. Macros
+    Ways to define code that defines more code at compile time!
+
+
