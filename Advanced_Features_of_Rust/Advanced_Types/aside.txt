@@ -1,0 +1,1 @@
+Recall, to use traits as trait objects, we must put them behind a pointer, such as `&dyn Trait` or `Box<dyn Trait>` ( Note that `Rc<dyn Trait>` would work too).
