@@ -1,0 +1,9 @@
+[package]
+name = "external_traits_on_external_types_via_newtype_pattern"
+version = "0.1.0"
+authors = ["David Golembiowski <dmgolembiowski@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
