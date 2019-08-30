@@ -1,1 +1,28 @@
 Recall, to use traits as trait objects, we must put them behind a pointer, such as `&dyn Trait` or `Box<dyn Trait>` ( Note that `Rc<dyn Trait>` would work too).
+
+To work with DSTs, Rust has a particular trait called the `Sized` trait to determine
+whether or not a type's size is known at compile time.
+
+This trait is automatically implemented for everything whose size is known at compile time. In addition, Rust implicitly adds a bound on `Sized` to every generic function! 
+That is: a generic function definition can be expanded from:
+
+```
+fn generic<T>(t: T) {}
+```
+
+to 
+
+```
+fn generic<T: Sized>(t: T) { }
+```
+
+<br />
+By default, generic functions will work only on types that have
+a known size at compile time. However, you can use the following special
+syntax to relax this restriction:
+
+```
+fn generic<T: ?Sized>(t: T) {}
+```
+
+which can be interpreted as "T may or may not be Sized"
