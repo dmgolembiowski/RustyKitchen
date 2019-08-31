@@ -5,6 +5,7 @@ Resume reading on page 550/593
 <br></br>
 
 To do:
++ Per page 566, try to write a version of `new` for the `ThreadPool` with the signature `pub fn new(size:usize) -> Result<ThreadPool, PoolCreationError> { ....`
 + Continue working through /Blog/blog/src/lib.rs
 + Create a program that intentionally creates a memory cycle!
 
