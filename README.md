@@ -1,6 +1,6 @@
 # RustyKitchen
 
-Resume reading on page 550/593
+FINISHED reading THE ENTIRE BOOK (page 593/593)
 <br></br>
 <br></br>
 
