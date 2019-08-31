@@ -27,13 +27,13 @@ type Job = Box<dyn FnBox + Send + 'static>;
 
 struct Worker {
     id: usize,
-    thread: thread::JoinHandle<()>,
+    thread: Option<thread::JoinHandle<()>>,
 }
 
+/// This implementation protects from the thing Raymond Hettinger
+/// warned about in his concurrency talk from San Francisco Bay 2017 Con.
 impl Worker {
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
-        /// This implementation protects from the thing Raymond Hettinger
-        /// warned about in his concurrency talk from San Francisco Bay 2017 Con.
         let thread = thread::spawn(move || {
             loop {
                 let job = receiver.lock().unwrap().recv().unwrap();
@@ -43,8 +43,9 @@ impl Worker {
         });
 
         Worker {
-            id,
-            thread }
+            id: id,
+            thread: Some(thread),
+        }
     }
 }
 
@@ -80,5 +81,30 @@ impl ThreadPool {
             let job = Box::new(f);
             self.sender.send(job).unwrap();
         }
+    /*
+    fn drop(&mut self) {
+        for worker in &mut self.workers {
+            println!("Shutting down worker {}", worker.id);
+            worker.thread.join().unwrap();
+        }
+    }
+    */
+}
+
+/// Using `if let` to destructure the `Some` and get the
+/// thread; then we call `join` on the thread.
+/// If a worker's thread is already `None`, we know that 
+/// worker has already had its thread cleaned up, so
+/// nothing happens.
+impl Drop for ThreadPool {
+    fn drop(&mut self) {
+        for worker in &mut self.workers {
+            println!("Shutting down worker {}", worker.id);
+            
+            if let Some(thread) = worker.thread.take() {
+                thread.join().unwrap();
+            }
+        }
+    }
 }
 
