@@ -9,6 +9,22 @@ use std::sync::mpsc;
  */
 use std::sync::{Arc, Mutex};
 
+trait FnBox {
+    fn call_box(self: Box<Self>);
+}
+
+/// Any `FnOnce()` closures can use this `call_box` method.
+/// The implementation of `call_box` uses `(*self)()` to move
+/// the closure out of the `Box<T>` and call the closure.
+impl<F: FnOnce()> FnBox for F {
+    fn call_box(self: Box<F>) {
+        (*self)()
+    }
+}
+
+type Job = Box<dyn FnBox + Send + 'static>;
+
+
 struct Worker {
     id: usize,
     thread: thread::JoinHandle<()>,
@@ -16,8 +32,14 @@ struct Worker {
 
 impl Worker {
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
-        let thread = thread::spawn(|| {
-            receiver;
+        /// This implementation protects from the thing Raymond Hettinger
+        /// warned about in his concurrency talk from San Francisco Bay 2017 Con.
+        let thread = thread::spawn(move || {
+            loop {
+                let job = receiver.lock().unwrap().recv().unwrap();
+                println!("Worker {} got a job; executing.", id);
+                job.call_box();
+            }
         });
 
         Worker {
@@ -31,10 +53,7 @@ pub struct ThreadPool {
     sender: mpsc::Sender<Job>,
 }
 
-struct Job;
-
-type Job = Box<FnOnce() + Send + 'static>;
-
+// struct Job;
 impl ThreadPool {
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
@@ -53,15 +72,10 @@ impl ThreadPool {
             sender,
         }
     }
-    // Define the `execute` method on `ThreadPool` to take
-    // a closure as a parameter (as Fn, FnMut, or FnOnce)
-    
+   
     pub fn execute<F>(&self, f: F)
         where
             F: FnOnce() + Send + 'static
-        // Using `()` after `FnOnce` b/c this parameter 
-        // represents a closure that takes no parameters
-        // and doesn't return a value.
         {
             let job = Box::new(f);
             self.sender.send(job).unwrap();
