@@ -1,0 +1,41 @@
+HTTP Request
+
+Method Request-URI HTTP-Version CRLF (\r\n)
+headers CRLF (\r\n)
+message-body
+
+
+
+Method Request-URI HTTP-Version CRLF (\r\n)
+
+
+headers CRLF (\r\n)
+
+
+message-body
+
+
+
+
+
+
+
+
+
+HTTP Response
+
+HTTP-Version Status-Code Reason-Phrase CRLF
+headers CRLF
+message-body
+
+
+
+
+HTTP-Version Status-Code Reason-Phrase CRLF
+
+
+headers CRLF
+
+
+message-body
+
