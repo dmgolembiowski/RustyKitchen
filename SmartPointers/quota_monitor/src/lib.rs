@@ -65,14 +65,14 @@ mod tests {
     
     #[test]
     fn warning_message() {
-        /// Create a new `MockMessenger` with an empty list of messages
+        // Create a new `MockMessenger` with an empty list of messages
         let mock_messenger = MockMessenger::new();
 
-        /// Create a new `LimitTracker`, giving it a reference to the new
-        /// `MockMessenger` and a max value of 100
+        // Create a new `LimitTracker`, giving it a reference to the new
+        // `MockMessenger` and a max value of 100
         let mut limit_tracker = LimitTracker::new(&mock_messenger, 100);
 
-        /// Set the value to greater than 75%
+        // Set the value to greater than 75%
         limit_tracker.set_value(80);
 
         /* (In the commented out assert_eq!() statement)
@@ -84,7 +84,8 @@ mod tests {
          * signature in the `Messenger` trait.
          * */
         // assert_eq!(mock_messenger.sent_messages.len(), 1);
-        /// For the above reasons, we must use "interior mutability". 
+        
+        // For the above reasons, we must use "interior mutability". 
         assert_eq!(mock_messenger.sent_messages.borrow_mut().len(), 1);
 
     }
