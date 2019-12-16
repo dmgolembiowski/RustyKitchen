@@ -31,7 +31,7 @@ impl Dictionary {
     fn print_updated(&mut self) {
         // Print only the highest values
         for (user_tag, score) in &mut self.data {
-            println!("{:?} -------------------------------------------------------- {:?} points", &user_tag, &score);
+            println!("{:?} -- {:?} points", &user_tag, &score);
         }
     }
 }
