@@ -1,3 +1,6 @@
+// Ah, what a novice :)
+// To anyone reading this -- plz don't take it seriously. It's wrong.
+
 /* 
 // "Textbook" Rust: 
 
